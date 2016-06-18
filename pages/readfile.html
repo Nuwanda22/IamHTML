@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Read File - IamHTML:)</title>
+    <link rel="shortcut icon" href="http://iamht.ml/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript">
+        function readTextFile(file) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        alert(allText);
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+        function setP(id, innerHTML) {
+            document.getElementById(id).innerHTML = innerHTML;
+        }
+        window.onload = function () {
+            setP('p', "hello");
+        }
+    </script>
+</head>
+<body>
+    <a href="http://iamht.ml">
+        <img src="http://iamht.ml/images/IamHTML.png" width="256" height="256"/>
+    </a>
+    <button onclick="alert(readTextFile('file:///C:/Users/Nuwanda/Desktop/a.txt'))">btn</button>
+    <p id="p"></p>
+</body>
+</html>

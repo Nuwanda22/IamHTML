@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Parameter - IamHTML:)</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="http://iamht.ml/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript">
+        function getUrlParams() {
+            var params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+            return params; 
+        }
+        function test(param) {
+            var params = getUrlParams();
+            var p = document.getElementById("p");
+            if (params[param] != null)
+                p.innerHTML = params[param];
+            else
+                p.innerHTML = "what the fuck";
+        }
+        function paramToValue(param) {
+            return getUrlParams()[param];
+        }
+    </script>
+</head>
+<body>
+    <a href="http://iamht.ml">
+        <img src="http://iamht.ml/images/IamHTML.png" width="256" height="256"/>
+    </a>
+    <input id="input"/> <button onclick="test(document.getElementById('input').value)">OK</button>
+    <br/>
+    <p id="p"></p>
+</body>
+</html>
