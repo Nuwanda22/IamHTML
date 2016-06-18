@@ -5,8 +5,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="http://iamht.ml/images/favicon.ico" type="image/x-icon" />
-    <!-- Main Page's css -->
-    <link rel="stylesheet" href="css/main.css">
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -24,37 +22,41 @@
 
 <body>
     <style>
-        .a {
+        #top-border {
             margin-top: 20px;
             margin-right: 30px;
             text-align: right;
         }
-        
-        .button {
-            background-color: rgb(70, 70, 70);
-            border: none;
-            color: white;
-            padding: 4px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .font {
-            font-size: 20px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
     </style>
-    
-    <div class="a">
-        <button type="button" class="btn btn-default default">
+
+    <div id="top-border">
+        <button type="button" class="btn btn-default default" title="All pages" onclick="window.open('http://iamht.ml/list.html')">
             <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
         </button>
-        <a href="http://iamht.ml/list.html">List</a>
-        <button class="button" onclick="alert('Not Now!')">Log-in</button>
+        <button type="button" class="btn btn-default default" title="Log in" onclick="alert('This is not Ready!')">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Log in
+        </button>
     </div>
-    <!-- Main Image -->
+
+    <style>
+        .container {
+            margin-top: 50px;
+            display: flex;
+        }
+        
+        .left-box {
+            flex: 1;
+        }
+        
+        .center-box {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .right-box {
+            flex: 1;
+        }
+    </style>
     <div class="container">
         <div class="left-box"></div>
         <div class="center-box">
@@ -65,10 +67,17 @@
         <div class="right-box"></div>
     </div>
 
-    <div class="center">
+    <div style="text-align: center;">
         <h1>Welcome To My Page!</h1>
         <br/>
         <div> This is Nuwanda's page. </div>
+        <style>
+            .font {
+                font-size: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        </style>
         <a href="https://github.com/Nuwanda22" class="font">GitHub</a>
         <a href="http://blog.naver.com/ko997ko" class="font">Blog</a>
     </div>
